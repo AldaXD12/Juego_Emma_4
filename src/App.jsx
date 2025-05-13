@@ -132,8 +132,8 @@ function CameraFollow({ target }) {
 function Pista() {
   const edgeLineWidth = 0.2; // Ancho de las nuevas líneas de borde coloreadas
   const whiteLineWidth = 0.1; // Ancho aproximado de las líneas blancas existentes
-  const centerLineWidth = 5; // Nuevo ancho para las líneas centrales blancas
-  const yellowLineWidth = 0.3; // Ancho base de las líneas amarillas
+  const centerLineWidth = 4; // Nuevo ancho para las líneas centrales blancas
+  const yellowLineWidth = 0.1; // Ancho base de las líneas amarillas
   const yellowBorderWidth = 0.05; // Ancho del borde negro alrededor de las amarillas
   const laneWidth = 3.25; // Ancho del carril (distancia entre centros de líneas amarillas)
 
