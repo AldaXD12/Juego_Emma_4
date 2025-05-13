@@ -1,0 +1,165 @@
+/* App.css */
+
+/* Hacer que el body y html ocupen toda la pantalla */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #87CEEB; /* Fondo de color cielo */
+  overflow: hidden; /* Evita barras de desplazamiento innecesarias */
+}
+
+/* Contenedor principal del juego para posicionamiento */
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ajuste del Canvas para ocupar todo el contenedor */
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Contenedor para los controles y el HUD */
+.controls-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end; /* Mueve el contenido a la derecha */
+  align-items: flex-start; /* Mueve el contenido a la parte superior */
+  padding: 20px;
+  pointer-events: none; /* Permite la interacción con el canvas */
+}
+
+/* HUD: interfaz de botones */
+/*.hud {
+  display: flex;
+  flex-direction: column; /* Alinea los botones verticalmente */
+/*  align-items: flex-end; /* Alinea los botones a la derecha */
+/*  gap: 10px; /* Espacio entre los botones */
+/*  pointer-events: auto; /* Permite la interacción con los botones */
+/*  margin-top: 20px; /* Añade un margen superior para separarlo del borde */
+/*}*/
+
+.hud {
+  position: absolute;
+  top: 20px; /* Ajusta la posición vertical según sea necesario */
+  left: 20px; /* Ajusta la posición horizontal inicial */
+  display: flex;
+  gap: 10px; /* Espacio entre los botones del HUD */
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.hud button {
+  padding: 10px 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.hud button:active {
+  opacity: 1;
+}
+
+.reset-button {
+  /* Estilos específicos para el botón de reinicio si los tienes */
+}
+
+
+/* Botones */
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00aaff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 0; /* Elimina el margen superior individual de los botones */
+}
+
+button:hover {
+  background-color: #0088cc;
+}
+
+/* Mensajes (Colisiones, Ganador, etc.) */
+/* Mensajes (Colisiones, Ganador, etc.) */
+.message {
+  position: fixed !important; /* !important para forzar la aplicación de este estilo */
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  padding: 10px 20px !important;
+  border-radius: 5px !important;
+  z-index: 1000 !important;
+  margin-top: 0 !important; /* Asegurarse de que no haya márgenes que lo muevan */
+  margin-bottom: 0 !important;
+}
+
+
+.touch-controls {
+  position: absolute;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior según sea necesario */
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Organiza los grupos de botones en columna */
+  align-items: center; /* Centra los grupos de botones horizontalmente */
+  gap: 10px; /* Espacio entre los grupos de botones */
+  padding: 0 20px; /* Añade un poco de padding lateral */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.touch-button-row {
+  display: flex;
+  gap: 10px; /* Espacio entre los botones Izquierda y Derecha */
+}
+
+.touch-button {
+  padding: 15px 30px; /* Aumenta el padding horizontal para botones más anchos */
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+  min-width: 100px; /* Asegura un ancho mínimo para los botones */
+  text-align: center; /* Centra el texto dentro de los botones */
+}
+
+.touch-button:active {
+  opacity: 1;
+}
+
+.up-button {
+  width: 150px; /* Ancho para el botón Arriba */
+}
+
+.down-button {
+  width: 150px; /* Ancho para el botón Abajo */
+}
+
+.left-button {
+  flex-grow: 1; /* Permite que Izquierda y Derecha compartan el espacio */
+}
+
+.right-button {
+  flex-grow: 1; /* Permite que Izquierda y Derecha compartan el espacio */
+}
